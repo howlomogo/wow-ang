@@ -1,0 +1,99 @@
+@import '_vars';
+@import '_reset';
+@import '_grid';
+@import '_base';
+@import '_pagination';
+@import 'pages/_cards';
+
+header, footer{
+  background-color: $color4;
+  color: $color1;
+  padding: $gutter;
+
+  // h1 can be moved at some point
+  h1 {
+    margin: 0px;
+  }  
+}
+
+.container{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+  min-height: 100%;
+  min-width: $page-width;
+}
+
+.main-content{
+  padding: $gutter;
+  background-color: $color3;
+
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  -ms-flex:1;
+  flex:1;
+}
+
+.sidebar{
+  font-family: 'Bree Serif', serif;
+  background-color: $color5;
+
+  -webkit-flex-basis: 220px;
+  -ms-flex-preferred-size: 220px;
+  flex-basis: 220px;
+
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+
+  ul {
+    margin-top: 0px;
+    li {
+      border-bottom: 1px solid $color4;
+      padding: $gutter-half 0px $gutter-half $gutter;
+      transition: background-color 0.5s ease;
+
+      // &:last-child {
+      //   border-bottom: none;
+      // }
+
+      &:hover {
+        background-color: darken( $color5, 10% );
+      }
+    }
+  }
+}
+
+.page--header {
+  background-color: $color5;
+
+  h2 {
+    margin: 0px;
+  }
+}
+
+// This can be moved all of this needs to be moved
+
+.filter-cont {
+  background-color: $color4;
+  color: $color1;
+  padding-top: $gutter-half;
+  padding-bottom: $gutter-half;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  h4 {
+    margin: 0px;
+  }
+}

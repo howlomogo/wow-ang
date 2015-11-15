@@ -1,0 +1,96 @@
+.main-container {
+  width: $page-width;
+  min-width: 1024px;
+  margin: 0px auto;
+  overflow: auto; // Makes the height of this fit around the floated left divs
+}
+
+.row {
+  width: $row-width;
+  float: left;
+  //display: flex; // Makes column heights equal... Pretty awesome.
+}
+
+.col-3 {
+  width: $row-width / 12 * 1;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-2 {
+  width: $row-width / 12 * 2;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-3 {
+  width: $row-width / 12 * 3;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-4 {
+  width: $row-width / 12 * 4;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-5 {
+  width: $row-width / 12 * 5;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-6 {
+  width: $row-width / 12 * 6;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-7 {
+  width: $row-width / 12 * 7;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-8 {
+  width: $row-width / 12 * 8;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-9 {
+  width: $row-width / 12 * 9;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-10 {
+  width: $row-width / 12 * 10;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-11 {
+  width: $row-width / 12 * 11;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}
+
+.col-12 {
+  width: $row-width;
+  float: left;
+  @extend .pad;
+  @extend .box;
+}

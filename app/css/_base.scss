@@ -1,0 +1,53 @@
+// Margins
+.mt {
+  margin-top: $gutter;
+}
+
+.mt-large {
+  margin-top: $gutter * 2;
+}
+
+.mb {
+  margin-bottom: $gutter;
+}
+
+.mb-large {
+  margin-bottom: $gutter * 2;
+}
+
+.mar {
+  margin: $gutter;
+}
+
+.mar-large {
+  margin: $gutter * 2;
+}
+
+// Paddings
+.pt {
+  padding-top: $gutter;
+}
+
+.pt-large {
+  padding-top: $gutter * 2;
+}
+
+.pb {
+  padding-bottom: $gutter;
+}
+
+.pb-large {
+  padding-bottom: $gutter * 2;
+}
+
+.pad {
+  padding: $gutter;
+}
+
+.pad-large {
+  padding: $gutter * 2;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Pilcher",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.4.4",
+    "angular-route": "^1.4.4"
+  }
+}

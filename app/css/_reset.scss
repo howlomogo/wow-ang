@@ -1,0 +1,49 @@
+html, body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: $color1;
+  height: 100%;
+}
+
+h1, h2 {
+  font-family: 'Bree Serif', serif;
+  font-weight: 800;
+}
+
+ul {
+  padding-left: 0px;
+  li {
+    list-style-type: none;
+    padding: 4px 0px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+hr {
+  margin: 0px;
+  border: none;
+  border-top: 1px solid $color1;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  border: solid 2px #ccc;
+  font-size: 16px;
+  padding: 6px 10px;
+  outline: none;
+  &:focus {
+    border: solid 2px $color5;
+  }
+}
+
+
+// Move when mixins created
+.box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
