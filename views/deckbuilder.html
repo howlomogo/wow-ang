@@ -32,20 +32,5 @@
         <option value="9">9</option>
       </select>
     </div>
-
-
-  </div>
-</div>
-<div class="row">
-  <div class="card-cont">
-    <div dir-paginate="card in cards.Basic | filter: searched | filter:{playerClass:class} | itemsPerPage: numOfItem" class="card-col">
-      <img src="http://wow.zamimg.com/images/hearthstone/cards/enus/original/{{card.id}}.png" />
-      <h4 ng-bind="card.name"></h4>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 text-center">
-    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="vendor/dirPagination.html"></dir-pagination-controls>
   </div>
 </div>

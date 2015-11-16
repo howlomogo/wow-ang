@@ -4,7 +4,7 @@ var browserSync = require('browser-sync').create();
 
 
 // Default
-gulp.task('default', ['browser-sync', 'sass-watch']);
+gulp.task('default', ['browser-sync', 'sass-watch', 'html-reload']);
 
 // Browser Sync
 gulp.task('browser-sync', function() {
@@ -16,12 +16,18 @@ gulp.task('browser-sync', function() {
   });
 });
 
-// Sass
+// HTML - watch
+gulp.task('html-reload', function() {
+  gulp.watch('./*.html').on('change', browserSync.reload);
+});
+
+// SASS
 gulp.task('sass', function() {
   console.log("Converting SASS to CSS")
   gulp.src('css/*.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('./css'));
+  .pipe(gulp.dest('./css'))
+  .pipe(browserSync.stream());
 });
 
 gulp.task('sass-watch', function() {
