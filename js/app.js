@@ -3,17 +3,17 @@ var app = angular.module('myApp', ['ngRoute']);
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/', {
+        templateUrl: 'views/profile.html', // Home Page
+        controller: 'MainCtrl'
+      }).
       when('/profile', {
         templateUrl: 'views/profile.html',
-        controller: 'MainCtrl' // Dont need these
+        controller: 'MainCtrl'
       }).
       when('/deckbuilder', {
         templateUrl: 'views/deckbuilder.html',
         controller: 'DeckBuilderCtrl'
-      }).
-      when('/cards', {
-        templateUrl: 'views/cards.html',
-        controller: 'CardsCtrl'
       }).
       otherwise({
         redirectTo: '/404',
@@ -23,17 +23,10 @@ app.config(['$routeProvider',
   }]);
 
 app.controller('MainCtrl', function($scope) {
-  
-});
-
-app.controller('CardsCtrl', function($scope, $http){
-  // Get card json data
-  $scope.jsondata =  $http.get("../json/cards.json")
-    .success(function(response) {
-      $scope.cards = response;
-    });
-});
-
-app.controller('DeckBuilderCtrl', function($scope){
-  console.log("On the deck builder page");
+  // Store fb user details in controller scope
+  $scope.facebookUser = {
+    firstName: "",
+    lastName: "",
+    picture: ""
+  };
 });

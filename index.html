@@ -2,7 +2,7 @@
 <html ng-app="myApp">
 <head>
   <meta charset="utf-8" />
-  <title>World Of Warcraft</title>
+  <title>Random Title</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css" />
@@ -12,27 +12,33 @@
 </head>
 
 <body>
-<header>
-  <h1>World Of Warcraft</h1>
-</header>
-<div class="container">
-  <div class="sidebar">
-    <ul>
-      <a href="#profile"><li>Profile</li></a>
-      <a href="#decks"><li>Decks</li></a>
-      <a href="#deckbuilder"><li>Deck Builder</li></a>
-      <a href="#cards"><li>Cards</li></a>
-      <a href="#recentmatches"><li>Recent Matches</li></a>
-      <a href="#populardecks"><li>Popular Decks</li></a>
-      <a href="#popularcards"><li>Popular Cards</li></a>
-      <a href="#rankings"><li>Rankings</li></a>
-    </ul>
-  </div>
-  <div class="main-content">
-    <div ng-view></div> <!-- http://localhost:7888/#/page1 -->
-  </div>
-</div>
-<footer>Footer</footer>
-</body>
+  <header class="nav-container">
+    <h1>Random Title</h1>
+    <img class="fb__profile-img pull-right" src="http://api.adorable.io/avatars/60/abott@adorable.io.png"/>
+    <!--<img class="fb__profile-img pull-right" ng-src="{{ facebookUser.picture }}"/>-->
+  </header>
+  <div id="mainctrl" class="container" ng-controller="MainCtrl">
+    <div class="sidebar">
+      <ul>
+        <a href="#profile"><li>Profile</li></a>
+        <a href="#decks"><li>Decks</li></a>
+      </ul>
+    </div>
 
+    <div class="main-content">
+      <div ng-view></div>
+      <!-- Move the facebook user details to within the ng-view -->
+    <h1>Welcome {{ facebookUser.firstName }} {{ facebookUser.lastName}} {{ facebookUser.picture }}</h1>
+
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button>
+
+      <button onclick="logoutFacebook()">Logout</button>
+    </div>
+  </div>
+
+  <footer>Footer</footer>
+</body>
+<script src="js/fb-funcs.js"></script>
+<script src="js/fbinit.js"></script>
 </html>
